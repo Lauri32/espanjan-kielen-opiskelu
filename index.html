@@ -11,33 +11,58 @@
             padding: 0;
             background-color: #fafafa;
             color: #333;
+            display: flex;
         }
         header {
             background-color: #4B0082;
             color: white;
             text-align: center;
             padding: 1rem;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
-        nav {
+        header nav {
             background-color: #2E0854;
-            color: white;
             display: flex;
             justify-content: center;
             padding: 1rem;
         }
-        nav a {
+        header nav a {
             color: white;
             padding: 0.5rem 1rem;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
+        header nav a:hover {
             background-color: #4B0082;
             border-radius: 5px;
         }
-        .container {
+        .sidebar {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 3.5rem;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            padding-top: 2rem;
+        }
+        .sidebar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 200px;
             padding: 2rem;
-            text-align: center;
+            padding-top: 5.5rem;
+            width: calc(100% - 200px);
         }
         .card {
             background-color: white;
@@ -95,233 +120,54 @@
 <body>
     <header>
         <h1>Learn Basic Words</h1>
-        <p>Improve your vocabulary with our elegant swap cards</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <h2 class="section-title">Basic Vocabulary</h2>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Hello</div>
-                <div class="card-back">Hola</div>
+    <aside class="sidebar">
+        <a href="#basic-vocabulary">Basic Vocabulary</a>
+        <a href="#common-phrases">Common Phrases</a>
+        <a href="#grammar-points">Grammar Points</a>
+    </aside>
+    <div class="content">
+        <section id="basic-vocabulary">
+            <h2 class="section-title">Basic Vocabulary</h2>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front">Hello</div>
+                    <div class="card-back">Hola</div>
+                </div>
             </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Goodbye</div>
-                <div class="card-back">Adiós</div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front">Goodbye</div>
+                    <div class="card-back">Adiós</div>
+                </div>
             </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Please</div>
-                <div class="card-back">Por favor</div>
+            <!-- Add more vocabulary cards here -->
+        </section>
+        <section id="common-phrases">
+            <h2 class="section-title">Common Phrases</h2>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front">What is your name?</div>
+                    <div class="card-back">¿Cómo te llamas?</div>
+                </div>
             </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Thank you</div>
-                <div class="card-back">Gracias</div>
+            <!-- Add more phrases cards here -->
+        </section>
+        <section id="grammar-points">
+            <h2 class="section-title">Grammar Points</h2>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front">The (masculine singular)</div>
+                    <div class="card-back">El</div>
+                </div>
             </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Yes</div>
-                <div class="card-back">Sí</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">No</div>
-                <div class="card-back">No</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Excuse me</div>
-                <div class="card-back">Perdón</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">I'm sorry</div>
-                <div class="card-back">Lo siento</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">How are you?</div>
-                <div class="card-back">¿Cómo estás?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Good morning</div>
-                <div class="card-back">Buenos días</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Good afternoon</div>
-                <div class="card-back">Buenas tardes</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Good night</div>
-                <div class="card-back">Buenas noches</div>
-            </div>
-        </div>
-        <h2 class="section-title">Common Phrases</h2>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">What is your name?</div>
-                <div class="card-back">¿Cómo te llamas?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">My name is...</div>
-                <div class="card-back">Me llamo...</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Where is the bathroom?</div>
-                <div class="card-back">¿Dónde está el baño?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">How much does this cost?</div>
-                <div class="card-back">¿Cuánto cuesta esto?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">I don't understand</div>
-                <div class="card-back">No entiendo</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Can you help me?</div>
-                <div class="card-back">¿Puedes ayudarme?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">I would like...</div>
-                <div class="card-back">Me gustaría...</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">What time is it?</div>
-                <div class="card-back">¿Qué hora es?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Where are you from?</div>
-                <div class="card-back">¿De dónde eres?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">I am from...</div>
-                <div class="card-back">Soy de...</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">Do you speak English?</div>
-                <div class="card-back">¿Hablas inglés?</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">I speak a little Spanish</div>
-                <div class="card-back">Hablo un poco de español</div>
-            </div>
-        </div>
-        <h2 class="section-title">Grammar Points</h2>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">The (masculine singular)</div>
-                <div class="card-back">El</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">The (feminine singular)</div>
-                <div class="card-back">La</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">The (masculine plural)</div>
-                <div class="card-back">Los</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">The (feminine plural)</div>
-                <div class="card-back">Las</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">A/An (masculine)</div>
-                <div class="card-back">Un</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">A/An (feminine)</div>
-                <div class="card-back">Una</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To be (permanent, conjugation for "I")</div>
-                <div class="card-back">Soy</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To be (temporary, conjugation for "I")</div>
-                <div class="card-back">Estoy</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To have (conjugation for "I")</div>
-                <div class="card-back">Tengo</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To go (conjugation for "I")</div>
-                <div class="card-back">Voy</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To do/make (conjugation for "I")</div>
-                <div class="card-back">Hago</div>
-            </div>
-        </div>
-        <div class="card" onclick="this.classList.toggle('is-flipped');">
-            <div class="card-inner">
-                <div class="card-front">To want (conjugation for "I")</div>
-                <div class="card-back">Quiero</div>
-            </div>
-        </div>
+            <!-- Add more grammar points cards here -->
+        </section>
     </div>
 </body>
 </html>
