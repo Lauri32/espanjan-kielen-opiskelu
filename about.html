@@ -77,7 +77,214 @@
     </header>
     <aside class="sidebar"></aside>
     <div class="content">
-        <!-- Content for About Us -->
+       <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Basic Words</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+            display: flex;
+        }
+        header {
+            background-color: #4B0082;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            background-color: #2E0854;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        header nav a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            background-color: #4B0082;
+            border-radius: 5px;
+        }
+        .sidebar {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 3.5rem;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            padding-top: 2rem;
+        }
+        .sidebar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 2rem;
+            padding-top: 5.5rem;
+            width: calc(100% - 200px);
+        }
+        .card {
+            background-color: white;
+            border: 2px solid #4B0082;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 1rem;
+            width: 200px;
+            height: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            perspective: 1000px;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+        }
+        .card.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+        .card-front {
+            background-color: #4B0082;
+            color: white;
+        }
+        .card-back {
+            background-color: #fafafa;
+            color: #4B0082;
+            transform: rotateY(180deg);
+        }
+        .card-front.red {
+            background-color: #B22222; /* Royal red shade */
+        }
+        .card-back.red {
+            background-color: #fff0f0; /* Lighter red shade */
+            color: #B22222;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn Basic Words</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <aside class="sidebar">
+        <a href="index.html#basic-vocabulary">Basic Vocabulary</a>
+        <a href="index.html#common-phrases">Common Phrases</a>
+        <a href="index.html#grammar-points">Grammar Points</a>
+    </aside>
+    <div class="content">
+        <section id="about">
+            <h2 class="section-title">Romantic Phrases</h2>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">Do you want to go out with me?</div>
+                    <div class="card-back red">¿Quieres salir conmigo?</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">I like you</div>
+                    <div class="card-back red">Me gustas</div>
+                </div>
+            </div>
+            <!-- Add more romantic phrases cards here in the same pattern -->
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">You are beautiful</div>
+                    <div class="card-back red">Eres hermosa</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">You are handsome</div>
+                    <div class="card-back red">Eres guapo</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">Can I have your phone number?</div>
+                    <div class="card-back red">¿Me das tu número de teléfono?</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">Would you like to have dinner with me?</div>
+                    <div class="card-back red">¿Te gustaría cenar conmigo?</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">Do you want to go to the movies?</div>
+                    <div class="card-back red">¿Quieres ir al cine?</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">I had a great time</div>
+                    <div class="card-back red">Lo pasé muy bien</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">Can I kiss you?</div>
+                    <div class="card-back red">¿Puedo besarte?</div>
+                </div>
+            </div>
+            <div class="card" onclick="this.classList.toggle('is-flipped');">
+                <div class="card-inner">
+                    <div class="card-front red">You have a beautiful smile</div>
+                    <div class="card-back red">Tienes una sonrisa hermosa</div>
+                </div>
+            </div>
+            <!-- Continue adding the remaining cards in this pattern -->
+        </section>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
