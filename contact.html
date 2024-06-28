@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact</title>
     <style>
         body {
             font-family: 'Times New Roman', serif;
@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #fafafa;
             color: #333;
-            display: flex;
         }
         header {
             background-color: #4B0082;
@@ -64,20 +63,398 @@
             padding-top: 5.5rem;
             width: calc(100% - 200px);
         }
+        .card {
+            background-color: white;
+            border: 2px solid #228B22; /* Fresh green shade */
+            border-radius: 10px;
+            display: inline-block;
+            margin: 1rem;
+            width: 200px;
+            height: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, border-color 0.3s;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+        }
+        .card.is-flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+        .card-front {
+            background-color: #228B22; /* Fresh green shade */
+            color: white;
+        }
+        .card-back {
+            background-color: #f0fff0; /* Lighter green shade */
+            color: #228B22;
+            transform: rotateY(180deg);
+        }
+        .card-front.green {
+            background-color: #228B22; /* Fresh green shade */
+        }
+        .card-back.green {
+            background-color: #f0fff0; /* Lighter green shade */
+            color: #228B22;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Contact</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <aside class="sidebar"></aside>
+    <aside class="sidebar">
+        <a href="index.html#basic-vocabulary">Basic Vocabulary</a>
+        <a href="index.html#common-phrases">Common Phrases</a>
+        <a href="index.html#grammar-points">Grammar Points</a>
+    </aside>
     <div class="content">
-        <!-- Content for Contact Us -->
+        <section id="contact">
+            <h2 class="section-title">Ordering Food in a Restaurant</h2>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Menu</div>
+                    <div class="card-back green">Menú</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Waiter/Waitress</div>
+                    <div class="card-back green">Camarero/Camarera</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Bill/Check</div>
+                    <div class="card-back green">Cuenta</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Tip</div>
+                    <div class="card-back green">Propina</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Reservation</div>
+                    <div class="card-back green">Reserva</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Table for two</div>
+                    <div class="card-back green">Mesa para dos</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Appetizer</div>
+                    <div class="card-back green">Aperitivo</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Main course</div>
+                    <div class="card-back green">Plato principal</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Dessert</div>
+                    <div class="card-back green">Postre</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Drink</div>
+                    <div class="card-back green">Bebida</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Water</div>
+                    <div class="card-back green">Agua</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Wine</div>
+                    <div class="card-back green">Vino</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Beer</div>
+                    <div class="card-back green">Cerveza</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Coffee</div>
+                    <div class="card-back green">Café</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Tea</div>
+                    <div class="card-back green">Té</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Juice</div>
+                    <div class="card-back green">Jugo</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Soda</div>
+                    <div class="card-back green">Refresco</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Bread</div>
+                    <div class="card-back green">Pan</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Salad</div>
+                    <div class="card-back green">Ensalada</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Soup</div>
+                    <div class="card-back green">Sopa</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Beef</div>
+                    <div class="card-back green">Carne de res</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Chicken</div>
+                    <div class="card-back green">Pollo</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Fish</div>
+                    <div class="card-back green">Pescado</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Pork</div>
+                    <div class="card-back green">Cerdo</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Vegetables</div>
+                    <div class="card-back green">Verduras</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Fruits</div>
+                    <div class="card-back green">Frutas</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Rice</div>
+                    <div class="card-back green">Arroz</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Pasta</div>
+                    <div class="card-back green">Pasta</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Potato</div>
+                    <div class="card-back green">Papa/Patata</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can I see the menu, please?</div>
+                    <div class="card-back green">¿Puedo ver el menú, por favor?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">What do you recommend?</div>
+                    <div class="card-back green">¿Qué recomienda?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I would like to order</div>
+                    <div class="card-back green">Me gustaría pedir</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I am ready to order</div>
+                    <div class="card-back green">Estoy listo/a para pedir</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">What is today's special?</div>
+                    <div class="card-back green">¿Cuál es el plato del día?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Is it spicy?</div>
+                    <div class="card-back green">¿Es picante?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I am allergic to</div>
+                    <div class="card-back green">Soy alérgico/a a</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I am a vegetarian</div>
+                    <div class="card-back green">Soy vegetariano/a</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can I have this without</div>
+                    <div class="card-back green">¿Puedo tener esto sin</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can you bring me the bill, please?</div>
+                    <div class="card-back green">¿Me trae la cuenta, por favor?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Is service included?</div>
+                    <div class="card-back green">¿Está incluido el servicio?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I don't eat meat</div>
+                    <div class="card-back green">No como carne</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">More bread, please</div>
+                    <div class="card-back green">Más pan, por favor</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Another round of drinks, please</div>
+                    <div class="card-back green">Otra ronda de bebidas, por favor</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can we have separate checks?</div>
+                    <div class="card-back green">¿Podemos tener cuentas separadas?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">I would like a table near the window</div>
+                    <div class="card-back green">Quisiera una mesa cerca de la ventana</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">How long is the wait?</div>
+                    <div class="card-back green">¿Cuánto tiempo es la espera?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can I have a glass of water?</div>
+                    <div class="card-back green">¿Me puede traer un vaso de agua?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">May I have a napkin?</div>
+                    <div class="card-back green">¿Me puede dar una servilleta?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Could you bring me a fork/spoon/knife?</div>
+                    <div class="card-back green">¿Me trae un tenedor/cuchara/cuchillo?</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">The food was delicious</div>
+                    <div class="card-back green">La comida estaba deliciosa</div>
+                </div>
+            </div>
+            <div class="card green">
+                <div class="card-inner">
+                    <div class="card-front green">Can we see the dessert menu?</div>
+                    <div class="card-back green">¿Podemos ver el menú de postres?</div>
+                </div>
+            </div>
+        </section>
     </div>
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('is-flipped');
+            });
+        });
+    </script>
 </body>
 </html>
